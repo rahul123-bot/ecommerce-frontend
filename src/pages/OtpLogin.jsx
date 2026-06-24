@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { sendOtpApi, verifyOtpApi } from "../features/auth/authApi";
+import { sendOtpApi, verifyOtpApi } from "../features/auth/authAPI.js";
 import {
   FaEnvelope,
   FaShieldAlt,
