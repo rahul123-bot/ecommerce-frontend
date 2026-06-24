@@ -21,7 +21,7 @@ import MyOrders from "./pages/MyOrders";
 import Orders from "./pages/admin/Orders";
 import Users from "./pages/admin/Users";
 import Payment from "./pages/Payment";
-import ManageOrder from "./pages/admin/ManageOrder";
+import ManageOrders from "./pages/admin/ManageOrders";
 import Wishlist from "./pages/Wishlist";
 import OtpLogin from "./pages/OtpLogin";
 import Footer from "./components/Footer";
@@ -113,7 +113,7 @@ function App() {
               path="/admin/orders"
               element={
                 <AdminRoute>
-                  <ManageOrder />
+                  <ManageOrders />
                 </AdminRoute>
               }
             />
