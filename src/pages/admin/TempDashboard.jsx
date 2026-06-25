@@ -34,7 +34,7 @@ const DashboardSkeleton = () => (
   </div>
 );
 
-const AdminDashboard = () => {
+const TempDashboard = () => {
   const dispatch = useDispatch();
   const { stats, analytics, loading } = useSelector((state) => state.dashboard);
 
@@ -249,4 +249,4 @@ const AdminDashboard = () => {
   );
 };
 
-export default AdminDashboard;
+export default TempDashboard;
