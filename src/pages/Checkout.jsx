@@ -47,37 +47,52 @@ const Checkout = () => {
     dispatch(getCart())
   }, [dispatch]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    const orderData = {
-      address,
-      city,
-      stateRegion,
-      postalCode,
-      phone,
-      paymentMethod,
-    };
-    
-   if (!cart?.items || cart.items.length === 0) {
-  alert("Your cart is empty! Please add items before checking out.");
-  navigate("/cart");
-  return;
-}
-    try {
-      const result = await dispatch(createOrder(orderData)).unwrap();
+  if (!cart?.items || cart.items.length === 0) {
+    alert("Your cart is empty!");
+    navigate("/cart");
+    return;
+  }
 
-      // Redirect based on outcome
-      if (paymentMethod === "Razorpay") {
-        navigate("/payment");
-      } else {
-        navigate("/my-orders");
-      }
-    } catch (error) {
-      console.error("Order failed:", error);
-      alert("Order failed. Please check console for details.");
-    }
+  const orderData = {
+    address,
+    city,
+    stateRegion,
+    postalCode,
+    phone,
+    paymentMethod,
   };
+
+  try {
+    // COD
+    if (paymentMethod === "COD") {
+      await dispatch(createOrder(orderData)).unwrap();
+
+      alert("Order placed successfully 🎉");
+      navigate("/my-orders");
+      return;
+    }
+
+    // Razorpay
+    localStorage.setItem(
+      "shippingInfo",
+      JSON.stringify(orderData)
+    );
+
+    // IMPORTANT
+    localStorage.setItem(
+      "paymentAmount",
+      cart.totalPrice
+    );
+
+    navigate("/payment");
+  } catch (error) {
+    console.error(error);
+    alert("Order failed");
+  }
+};
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 antialiased font-sans py-6 sm:py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">

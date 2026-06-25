@@ -50,35 +50,37 @@ const Payment = () => {
         description: "Secure Order Payment",
         image: "https://cdn-icons-png.flaticon.com/512/263/263142.png",
 
-        handler: async function (response) {
+         handler: async function (response) {
           try {
-            // Create order ONLY AFTER successful payment
-            const result = await dispatch(
+            await dispatch(
               createOrder({
                 address: shippingInfo.address,
                 city: shippingInfo.city,
-                stateRegion: shippingInfo.stateRegion,
-                postalCode: shippingInfo.postalCode,
+                stateRegion:
+                  shippingInfo.stateRegion,
+                postalCode:
+                  shippingInfo.postalCode,
                 phone: shippingInfo.phone,
+
                 paymentMethod: "Razorpay",
                 paymentStatus: "Paid",
-              }),
+              })
+            ).unwrap();
+
+            localStorage.removeItem(
+              "paymentAmount"
             );
 
-            if (!result.payload) {
-              alert("Order creation failed");
-              return;
-            }
-
-            localStorage.removeItem("paymentAmount");
-            localStorage.removeItem("shippingInfo");
+            localStorage.removeItem(
+              "shippingInfo"
+            );
 
             alert("Payment Successful 🎉");
 
             navigate("/my-orders");
-          } catch (error) {
-            console.error(error);
-            alert("Failed to save order.");
+          } catch (err) {
+            console.error(err);
+            alert("Order creation failed");
           }
         },
 
