@@ -15,7 +15,7 @@ import Cart from "./pages/Cart";
 import AddProduct from "./pages/admin/AddProduct";
 import EditProduct from "./pages/admin/EditProduct";
 import ProductDetails from "./pages/ProductDetails";
-import TempDashboard from "./pages/admin/TempDashboard";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 import Checkout from "./pages/Checkout";
 import MyOrders from "./pages/MyOrders";
 import Orders from "./pages/admin/Orders";
@@ -96,7 +96,7 @@ function App() {
               path="/admin"
               element={
                 <AdminRoute>
-                  <TempDashboard />
+                  <AdminDashboard />
                 </AdminRoute>
               }
             />
