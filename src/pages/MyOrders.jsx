@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getMyOrders, cancelOrder } from "../features/order/orderSlice";
 import Loader from "../components/Loader";
-import generateInvoice from "../utils/generateInvoice";
+import generateInvoice from "../utils/generateInvoice.js";
 
 const MyOrders = () => {
   const dispatch = useDispatch();

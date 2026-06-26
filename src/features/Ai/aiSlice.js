@@ -39,7 +39,7 @@ const aiSlice = createSlice({
       )
 
       .addCase(sendMessage.fulfilled, (state, action) => {
-        console.log(action.payload);
+  
 
         state.loading = false;
 
@@ -53,7 +53,7 @@ const aiSlice = createSlice({
       })
 
       .addCase(sendMessage.rejected, (state, action) => {
-        console.log(action.error);
+    
 
         state.loading = false;
 
