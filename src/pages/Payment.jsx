@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaLock,
   FaShieldAlt,
@@ -10,17 +10,47 @@ import {
 import loadRazorpay from "../utils/loadRazorpay";
 import { createOrderApi } from "../features/payment/paymentApi.js";
 import { createOrder } from "../features/order/orderSlice.js";
+import { getCart } from "../features/cart/cartSlice";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
-  const amount = Number(localStorage.getItem("paymentAmount")) || 0;
+  const [amount, setAmount] = useState(0);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { cart, loading: cartLoading } = useSelector((state) => state.cart);
 
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    dispatch(getCart());
+
+    const storedAmount = localStorage.getItem("paymentAmount");
+    const parsedAmount = Number(storedAmount);
+
+    if (storedAmount && parsedAmount > 0) {
+      setAmount(parsedAmount);
+      return;
+    }
+
+    if (cart?.items?.length > 0) {
+      const cartAmount = cart.items.reduce(
+        (acc, item) => acc + (item.product?.price || 0) * (item.quantity || 0),
+        0,
+      );
+
+      if (cartAmount > 0) {
+        localStorage.setItem("paymentAmount", cartAmount);
+        setAmount(cartAmount);
+        return;
+      }
+    }
+
+    alert("Invalid payment amount. Please return to checkout and try again.");
+    navigate("/checkout/:id");
+  }, [cart, dispatch, navigate]);
 
   const handlePayment = async () => {
     try {
