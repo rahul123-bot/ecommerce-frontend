@@ -26,6 +26,12 @@ const Payment = () => {
     try {
       setLoading(true);
 
+      if (!amount || amount <= 0) {
+        alert("Invalid payment amount. Please return to checkout and try again.");
+        setLoading(false);
+        return;
+      }
+
       const loaded = await loadRazorpay();
 
       if (!loaded) {
@@ -46,7 +52,7 @@ const Payment = () => {
         amount: data.amount,
         currency: data.currency,
         order_id: data.id,
-        name: "FlipShop",
+        name: "AIShop",
         description: "Secure Order Payment",
         image: "https://cdn-icons-png.flaticon.com/512/263/263142.png",
 
