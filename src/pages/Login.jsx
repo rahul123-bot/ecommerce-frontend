@@ -9,14 +9,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault(); // Prevents page reload on standard form submit
     if (!email || !password) return;
-    
+
     setIsLoading(true);
     try {
       console.log({ email, password });
@@ -36,13 +36,10 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex items-center justify-center px-4 py-8 sm:px-6 lg:px-8 font-sans selection:bg-orange-500/20">
-      
       {/* Container Box */}
       <div className="max-w-4xl w-full grid md:grid-cols-5 rounded-2xl overflow-hidden shadow-xl border border-slate-200 bg-white">
-        
         {/* LEFT MARKETING SIDEBAR (Amazon Prime / Flipkart Inspired) */}
         <div className="hidden md:flex md:col-span-2 flex-col justify-between bg-gradient-to-br from-indigo-950 via-slate-900 to-black p-8 text-white relative">
-          
           {/* Ambient Lighting Gradients */}
           <div className="absolute top-0 right-0 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
@@ -59,18 +56,24 @@ const Login = () => {
             <h2 className="text-2xl font-bold tracking-tight leading-snug">
               Unlock exclusive deals & lightning-fast checkout.
             </h2>
-            
+
             <ul className="space-y-4 text-xs font-medium text-slate-300">
               <li className="flex items-center gap-3">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 text-[10px]">✓</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 text-[10px]">
+                  ✓
+                </span>
                 Track real-time delivery dispatches
               </li>
               <li className="flex items-center gap-3">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 text-[10px]">✓</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 text-[10px]">
+                  ✓
+                </span>
                 Save curated dynamic wishlists
               </li>
               <li className="flex items-center gap-3">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 text-[10px]">✓</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-orange-500/20 text-orange-400 text-[10px]">
+                  ✓
+                </span>
                 Access early deal drops & cashbacks
               </li>
             </ul>
@@ -85,20 +88,19 @@ const Login = () => {
         {/* RIGHT INTERACTION PANEL */}
         <div className="p-6 sm:p-10 md:p-12 md:col-span-3 flex flex-col justify-center bg-white">
           <div className="w-full max-w-md mx-auto space-y-6">
-            
             {/* Form Header */}
             <div className="space-y-1.5">
               <h2 className="text-2xl font-extrabold tracking-tight text-slate-900">
                 Sign In
               </h2>
               <p className="text-xs font-medium text-slate-500">
-                Welcome back! Please enter your account credentials to continue shopping.
+                Welcome back! Please enter your account credentials to continue
+                shopping.
               </p>
             </div>
 
             {/* Main Interactive Form */}
             <form onSubmit={handleLogin} className="space-y-4">
-              
               {/* Email Address */}
               <div className="space-y-1">
                 <label className="text-xs font-bold text-slate-700 tracking-wide block">
@@ -121,8 +123,8 @@ const Login = () => {
                   <label className="text-xs font-bold text-slate-700 tracking-wide block">
                     Password
                   </label>
-                  <Link 
-                    to="/forgot-password" 
+                  <Link
+                    to="/forgot-password"
                     className="text-xs font-semibold text-orange-600 hover:text-orange-500 hover:underline transition-colors"
                   >
                     Forgot Password?
@@ -148,7 +150,6 @@ const Login = () => {
                 >
                   {isLoading ? "Signing in..." : "Continue"}
                 </button>
-
               </div>
             </form>
 
@@ -182,7 +183,14 @@ const Login = () => {
                 width="100%"
               />
             </div>
-
+            <div className="text-center">
+              <Link
+                to="/otp-login"
+                className="text-orange-600 font-semibold hover:underline"
+              >
+                Login with OTP
+              </Link>
+            </div>
             {/* Registration Anchor Callout */}
             <p className="text-center text-xs font-medium text-slate-500 pt-2">
               New to our marketplace?
@@ -193,10 +201,8 @@ const Login = () => {
                 Create your account
               </Link>
             </p>
-
           </div>
         </div>
-
       </div>
     </div>
   );

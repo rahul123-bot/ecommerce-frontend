@@ -11,3 +11,11 @@ export const forgotPasswordApi = (email) =>
 
 export const resetPasswordApi = (token, password) =>
   API.post(`/auth/reset-password/${token}`, { password });
+
+export const sendOtpApi = (email) => API.post("/auth/send-otp", { email });
+
+export const verifyOtpApi = (email, otp) =>
+  API.post("/auth/verify-otp", {
+    email,
+    otp,
+  });

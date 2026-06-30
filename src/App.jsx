@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ForgotPassword from "./pages/ForgotPassword";
 import ResetPassword from "./pages/ResetPassword";
+import OtpLogin from "./pages/OtpLogin";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminRoute from "./routes/AdminRoute";
 import PublicRoute from "./routes/PublicRoute";
@@ -69,12 +70,16 @@ function App() {
                 </PublicRoute>
               }
             />
+            <Route
+              path="/otp-login"
+              element={
+                <PublicRoute>
+                  <OtpLogin />
+                </PublicRoute>
+              }
+            />
 
-            <Route path="/reset-password/:token" 
-            element={
-            <ResetPassword />
-          }
-             />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route
               path="/cart"
               element={

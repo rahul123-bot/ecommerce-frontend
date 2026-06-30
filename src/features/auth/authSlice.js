@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { loginApi, registerApi } from "./authAPI";
+import { loginApi, registerApi, sendOtpApi, verifyOtpApi } from "./authAPI";
 
 export const loginUser = createAsyncThunk(
   "auth/loginUser",
@@ -48,6 +48,32 @@ export const registerUser = createAsyncThunk(
     }
   },
 );
+export const sendOtp = createAsyncThunk(
+  "auth/sendOtp",
+
+  async (email, thunkAPI) => {
+    try {
+      const { data } = await sendOtpApi(email);
+
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response?.data || error.message);
+    }
+  },
+);
+export const sendOtp = createAsyncThunk(
+  "auth/sendOtp",
+
+  async (email, thunkAPI) => {
+    try {
+      const { data } = await sendOtpApi(email);
+
+      return data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response?.data || error.message);
+    }
+  },
+);
 
 const authSlice = createSlice({
   name: "auth",
@@ -86,6 +112,32 @@ const authSlice = createSlice({
         state.user = action.payload;
       })
       .addCase(registerUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(sendOtp.pending, (state) => {
+        state.loading = true;
+      })
+
+      .addCase(sendOtp.fulfilled, (state) => {
+        state.loading = false;
+      })
+
+      .addCase(sendOtp.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      .addCase(verifyOtp.pending, (state) => {
+        state.loading = true;
+      })
+
+      .addCase(verifyOtp.fulfilled, (state, action) => {
+        state.loading = false;
+        state.user = action.payload.user;
+      })
+
+      .addCase(verifyOtp.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
