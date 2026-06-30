@@ -149,13 +149,6 @@ const Login = () => {
                   {isLoading ? "Signing in..." : "Continue"}
                 </button>
 
-                <button
-                  type="button"
-                  onClick={() => navigate("/otp-login")}
-                  className="w-full bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 py-3 rounded-xl text-xs font-bold tracking-wide transition-all active:scale-[0.99]"
-                >
-                  Use One-Time Password (OTP)
-                </button>
               </div>
             </form>
 

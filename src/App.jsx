@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 
 import Register from "./pages/Register";
+import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/ResetPassword";
 import ProtectedRoute from "./routes/ProtectedRoute";
 import AdminRoute from "./routes/AdminRoute";
 import PublicRoute from "./routes/PublicRoute";
@@ -23,7 +25,6 @@ import Users from "./pages/admin/Users";
 import Payment from "./pages/Payment";
 import ManageOrders from "./pages/admin/ManageOrders";
 import Wishlist from "./pages/Wishlist";
-import OtpLogin from "./pages/OtpLogin";
 import Footer from "./components/Footer";
 import ProfilePage from "./pages/ProfilePage";
 import BackToTop from "./components/BackToTop";
@@ -60,6 +61,21 @@ function App() {
                 </PublicRoute>
               }
             />
+            <Route path="/forgot-password" 
+            element={
+            <PublicRoute>
+              <ForgotPassword/>
+              </PublicRoute>
+            } 
+            />
+
+            <Route path="/reset-password/:token" 
+            element={
+              <PublicRoute>
+                 <ResetPassword />
+              </PublicRoute>
+           } 
+           />
             <Route
               path="/cart"
               element={
@@ -158,7 +174,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="/otp-login" element={<OtpLogin />} />
           </Routes>
         </main>
         <Footer />

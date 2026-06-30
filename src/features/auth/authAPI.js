@@ -6,10 +6,8 @@ export const registerApi = (data) => API.post("/auth/register", data);
 
 export const googleLoginApi = (data) => API.post("/auth/google", data);
 
-export const sendOtpApi = (email) => API.post("/auth/send-otp", { email });
+export const forgotPasswordApi = (email) =>
+  API.post("/auth/forgot-password", { email });
 
-export const verifyOtpApi = (email, otp) =>
-  API.post("/auth/verify-otp", {
-    email,
-    otp,
-  });
+export const resetPasswordApi = (token, password) =>
+  API.post(`/auth/reset-password/${token}`, { password });
