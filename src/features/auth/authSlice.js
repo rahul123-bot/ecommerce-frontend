@@ -61,19 +61,40 @@ export const sendOtp = createAsyncThunk(
     }
   },
 );
-export const sendOtp = createAsyncThunk(
-  "auth/sendOtp",
+export const verifyOtp =
+  createAsyncThunk(
+    "auth/verifyOtp",
 
-  async (email, thunkAPI) => {
-    try {
-      const { data } = await sendOtpApi(email);
+    async (
+      { email, otp },
+      thunkAPI
+    ) => {
+      try {
+        const { data } =
+          await verifyOtpApi(
+            email,
+            otp
+          );
 
-      return data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error.response?.data || error.message);
+        localStorage.setItem(
+          "token",
+          data.token
+        );
+
+        localStorage.setItem(
+          "user",
+          JSON.stringify(data.user)
+        );
+
+        return data;
+      } catch (error) {
+        return thunkAPI.rejectWithValue(
+          error.response?.data ||
+            error.message
+        );
+      }
     }
-  },
-);
+  );
 
 const authSlice = createSlice({
   name: "auth",

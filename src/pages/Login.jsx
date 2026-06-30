@@ -159,7 +159,14 @@ const Login = () => {
               <span>or connect with</span>
               <div className="flex-1 h-px bg-slate-100" />
             </div>
-
+            <div className="text-center">
+              <Link
+                to="/otp-login"
+                className="text-orange-600 font-semibold hover:underline"
+              >
+                Login with OTP
+              </Link>
+            </div>
             {/* OAuth Sign-In Layer */}
             <div className="flex justify-center pt-0.5 overflow-hidden rounded-xl">
               <GoogleLogin
@@ -183,14 +190,7 @@ const Login = () => {
                 width="100%"
               />
             </div>
-            <div className="text-center">
-              <Link
-                to="/otp-login"
-                className="text-orange-600 font-semibold hover:underline"
-              >
-                Login with OTP
-              </Link>
-            </div>
+            
             {/* Registration Anchor Callout */}
             <p className="text-center text-xs font-medium text-slate-500 pt-2">
               New to our marketplace?
