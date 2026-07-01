@@ -43,7 +43,7 @@ const Navbar = () => {
               className="hover:opacity-95 transition-opacity flex flex-col justify-center select-none group"
             >
               <span className="text-base sm:text-xl font-black italic tracking-tight leading-none text-white">
-                AI Shop
+                NexaCart
               </span>
               <span className="text-[9px] sm:text-[10px] font-medium italic text-amber-300 flex items-center gap-0.5 mt-0.5 tracking-wide">
                 Explore{" "}

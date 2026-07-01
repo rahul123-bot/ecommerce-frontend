@@ -82,7 +82,7 @@ const Payment = () => {
         amount: data.amount,
         currency: data.currency,
         order_id: data.id,
-        name: "AIShop",
+        name: "NexaCart",
         description: "Secure Order Payment",
         image: "https://cdn-icons-png.flaticon.com/512/263/263142.png",
 

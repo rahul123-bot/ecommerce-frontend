@@ -98,7 +98,7 @@ const Login = () => {
           {/* Mobile Top Header - Only shows up on mobile screens */}
           <div className="flex md:hidden items-center justify-between pb-6 mb-2 border-b border-slate-100">
             <div className="flex items-center gap-1.5 font-black text-xl tracking-tight text-blue-600">
-              <span>🛒</span> AIShop
+              <span>🛒</span> NexaCart
             </div>
             <Link to="/register" className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-all">
               Sign Up

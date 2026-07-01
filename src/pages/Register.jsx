@@ -188,7 +188,7 @@ const Register = () => {
               </p>
               
               <p className="text-[11px] text-slate-400 leading-relaxed font-medium">
-                By maintaining registration sequences, you certify authorization of AIShop's <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Conditions of Sale</span> and structural processing clauses noted inside our <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Privacy Registry</span>.
+                By maintaining registration sequences, you certify authorization of NexaCart's <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Conditions of Sale</span> and structural processing clauses noted inside our <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Privacy Registry</span>.
               </p>
             </div>
 
