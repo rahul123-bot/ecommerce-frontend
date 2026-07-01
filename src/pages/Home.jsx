@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaTag, FaStar, FaShieldAlt, FaTruck, FaRegClock, FaChevronRight, FaCompass, FaUserCircle } from "react-icons/fa";
 import ProductCard from "../components/ProductCard";
@@ -37,7 +37,7 @@ const Home = () => {
           {/* Brand Identity */}
           <div className="flex items-center justify-between w-full md:w-auto shrink-0 select-none">
             <span className="text-2xl font-black tracking-tight italic text-white flex items-center gap-1 group cursor-pointer">
-              🛒 AI<span className="text-yellow-400 not-italic">Shop</span>
+              ðŸ›’ Nexa<span className="text-yellow-400 not-italic">Cart</span>
               <span className="text-[10px] font-bold bg-yellow-400 text-blue-900 not-italic px-1.5 py-0.5 rounded-md ml-1.5 shadow-sm tracking-wide uppercase">Plus</span>
             </span>
             
@@ -142,7 +142,7 @@ const Home = () => {
         {/* CONDITIONAL SYSTEM ROW FOR DATA RENDERS */}
         {!products || products.length === 0 ? (
           <div className="text-center py-20 bg-white border border-slate-200 rounded-2xl shadow-sm space-y-4">
-            <span className="text-5xl block select-none animate-bounce">📦</span>
+            <span className="text-5xl block select-none animate-bounce">ðŸ“¦</span>
             <h3 className="text-base font-bold text-slate-800">No Active Offers Found</h3>
             <p className="text-xs text-slate-400 max-w-sm mx-auto leading-relaxed">
               Our catalog indices are currently updating. Please refresh your browser window to display our incoming product inventory lines.

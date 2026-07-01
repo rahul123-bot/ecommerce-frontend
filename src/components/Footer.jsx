@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -19,7 +19,7 @@ const Footer = () => {
         {/* Brand Section */}
         <div className="lg:col-span-1">
           <h2 className="text-3xl font-black text-blue-600 mb-4 tracking-tighter">
-            AI-Shop
+            NexaCart
           </h2>
           <p className="text-sm leading-7 text-gray-500">
             Premium electronics and fashion delivered with AI-powered efficiency.
@@ -106,7 +106,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="bg-gray-50 py-4 text-center">
         <p className="text-xs text-gray-400">
-          © {new Date().getFullYear()} AI-Shop Pvt. Ltd. All rights reserved.
+          © {new Date().getFullYear()} NexaCart Pvt. Ltd. All rights reserved.
         </p>
       </div>
     </footer>
@@ -114,3 +114,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

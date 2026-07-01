@@ -64,7 +64,7 @@ const OtpLogin = () => {
             {/* Logo */}
             <div className="flex items-center gap-2 text-xl font-bold tracking-wide mb-14">
               <span className="text-[#ff8f00] text-2xl">🛒</span>
-              <span>AI <span className="text-gray-300 font-light">Shop</span></span>
+              <span>Nexa<span className="text-gray-300 font-light">Cart</span></span>
             </div>
 
             {/* Banner Value Proposition */}

@@ -49,7 +49,7 @@ const Login = () => {
           <div className="relative z-10">
             <Link to="/" className="flex items-center gap-2 font-black text-2xl tracking-tight text-white group">
               <span className="text-2xl transition-transform group-hover:scale-110 duration-300">🛒</span> 
-              <span>AI<span className="text-yellow-400">Shop</span></span>
+              <span>Nexa<span className="text-yellow-400">Cart</span></span>
             </Link>
           </div>
 

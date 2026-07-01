@@ -59,7 +59,7 @@ const Register = () => {
 
           <div className="space-y-2 z-10">
             <Link to="/" className="text-2xl font-black tracking-tight text-white inline-block">
-              AI<span className="text-amber-400">Shop</span><span className="text-xs font-bold text-sky-200 ml-0.5">.in</span>
+              Nexa<span className="text-amber-400">Cart</span>
             </Link>
             <h2 className="text-2xl font-bold tracking-tight pt-6">Looks like you're new here!</h2>
             <p className="text-sm text-sky-100/80 leading-relaxed">
@@ -90,7 +90,7 @@ const Register = () => {
           {/* Mobile Branding Header */}
           <div className="lg:hidden mb-8 text-center">
             <Link to="/" className="text-3xl font-black tracking-tight text-slate-900">
-              AI<span className="text-[#ff9f00]">Shop</span><span className="text-xs font-bold text-slate-400 ml-0.5">.in</span>
+              Nexa<span className="text-[#ff9f00]">Cart</span>
             </Link>
           </div>
 
