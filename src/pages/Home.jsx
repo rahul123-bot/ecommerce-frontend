@@ -37,7 +37,7 @@ const Home = () => {
           {/* Brand Identity */}
           <div className="flex items-center justify-between w-full md:w-auto shrink-0 select-none">
             <span className="text-2xl font-black tracking-tight italic text-white flex items-center gap-1 group cursor-pointer">
-              ðŸ›’ Nexa<span className="text-yellow-400 not-italic">Cart</span>
+               Nexa<span className="text-yellow-400 not-italic">Cart</span>
               <span className="text-[10px] font-bold bg-yellow-400 text-blue-900 not-italic px-1.5 py-0.5 rounded-md ml-1.5 shadow-sm tracking-wide uppercase">Plus</span>
             </span>
             
