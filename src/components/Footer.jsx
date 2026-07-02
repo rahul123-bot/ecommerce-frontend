@@ -9,6 +9,7 @@ import {
   FaLock,
   FaShieldAlt,
 } from "react-icons/fa";
+import logo from "../assets/NextCart_logo.png";
 
 const Footer = () => {
   return (
@@ -18,9 +19,11 @@ const Footer = () => {
         
         {/* Brand Section */}
         <div className="lg:col-span-1">
-          <h2 className="text-3xl font-black text-blue-600 mb-4 tracking-tighter">
-            NexaCart
-          </h2>
+          <img
+            src={logo}
+            alt="NextCart logo"
+            className="h-12 w-auto object-contain mb-4"
+          />
           <p className="text-sm leading-7 text-gray-500">
             Premium electronics and fashion delivered with AI-powered efficiency.
           </p>
@@ -106,7 +109,7 @@ const Footer = () => {
       {/* Copyright */}
       <div className="bg-gray-50 py-4 text-center">
         <p className="text-xs text-gray-400">
-          © {new Date().getFullYear()} NexaCart Pvt. Ltd. All rights reserved.
+          © {new Date().getFullYear()} NextCart Pvt. Ltd. All rights reserved.
         </p>
       </div>
     </footer>

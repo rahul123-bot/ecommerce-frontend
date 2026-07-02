@@ -17,6 +17,7 @@ import {
 
 import { FiLogOut } from "react-icons/fi";
 import { logout } from "../features/auth/authSlice";
+import logo from "../assets/NextCart_logo.png";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,17 +41,24 @@ const Navbar = () => {
           <div className="flex items-center gap-2 shrink-0">
             <Link
               to="/"
-              className="hover:opacity-95 transition-opacity flex flex-col justify-center select-none group"
+              className="hover:opacity-95 transition-opacity flex items-center gap-2 select-none group"
             >
-              <span className="text-base sm:text-xl font-black italic tracking-tight leading-none text-white">
-                NexaCart
-              </span>
-              <span className="text-[9px] sm:text-[10px] font-medium italic text-amber-300 flex items-center gap-0.5 mt-0.5 tracking-wide">
-                Explore{" "}
-                <span className="font-extrabold text-white group-hover:text-amber-400 transition-colors">
-                  Plus
+              <img
+                src={logo}
+                alt="NextCart logo"
+                className="h-8 sm:h-10 w-auto object-contain drop-shadow-sm"
+              />
+              <div className="hidden sm:flex flex-col justify-center leading-none">
+                <span className="text-base sm:text-xl font-black italic tracking-tight text-white">
+                  NextCart
                 </span>
-              </span>
+                <span className="text-[9px] sm:text-[10px] font-medium italic text-amber-300 flex items-center gap-0.5 mt-0.5 tracking-wide">
+                  Explore{" "}
+                  <span className="font-extrabold text-white group-hover:text-amber-400 transition-colors">
+                    Plus
+                  </span>
+                </span>
+              </div>
             </Link>
           </div>
 

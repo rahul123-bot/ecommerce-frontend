@@ -9,7 +9,7 @@ const generateInvoice = (order) => {
 
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(24);
-  doc.text("NexaCart", 15, 20);
+  doc.text("NextCart", 15, 20);
 
   doc.setFontSize(12);
   doc.text("Premium Shopping Invoice", 15, 28);

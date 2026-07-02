@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { sendOtp, verifyOtp } from "../features/auth/authSlice";
+import logo from "../assets/NextCart_logo.png";
 
 const OtpLogin = () => {
   const dispatch = useDispatch();
@@ -62,9 +63,9 @@ const OtpLogin = () => {
         <div className="hidden md:flex flex-col justify-between w-2/5 bg-[#0f111e] text-white p-10 relative">
           <div>
             {/* Logo */}
-            <div className="flex items-center gap-2 text-xl font-bold tracking-wide mb-14">
-              <span className="text-[#ff8f00] text-2xl">🛒</span>
-              <span>Nexa<span className="text-gray-300 font-light">Cart</span></span>
+            <div className="flex items-center gap-3 text-xl font-bold tracking-wide mb-14">
+              <img src={logo} alt="NextCart logo" className="h-8 w-auto object-contain" />
+              <span>Next<span className="text-gray-300 font-light">Cart</span></span>
             </div>
 
             {/* Banner Value Proposition */}

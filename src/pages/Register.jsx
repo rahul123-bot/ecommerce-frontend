@@ -12,6 +12,7 @@ import {
   FaTruck,
   FaUndoAlt,
 } from "react-icons/fa";
+import logo from "../assets/NextCart_logo.png";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -58,8 +59,9 @@ const Register = () => {
           <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-sky-400/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="space-y-2 z-10">
-            <Link to="/" className="text-2xl font-black tracking-tight text-white inline-block">
-              Nexa<span className="text-amber-400">Cart</span>
+            <Link to="/" className="flex items-center gap-3 text-2xl font-black tracking-tight text-white inline-block">
+              <img src={logo} alt="NextCart logo" className="h-10 w-auto object-contain" />
+              <span>Next<span className="text-amber-400">Cart</span></span>
             </Link>
             <h2 className="text-2xl font-bold tracking-tight pt-6">Looks like you're new here!</h2>
             <p className="text-sm text-sky-100/80 leading-relaxed">
@@ -89,8 +91,9 @@ const Register = () => {
           
           {/* Mobile Branding Header */}
           <div className="lg:hidden mb-8 text-center">
-            <Link to="/" className="text-3xl font-black tracking-tight text-slate-900">
-              Nexa<span className="text-[#ff9f00]">Cart</span>
+            <Link to="/" className="flex items-center justify-center gap-3 text-3xl font-black tracking-tight text-slate-900">
+              <img src={logo} alt="NextCart logo" className="h-10 w-auto object-contain" />
+              <span>Next<span className="text-[#ff9f00]">Cart</span></span>
             </Link>
           </div>
 
@@ -188,7 +191,7 @@ const Register = () => {
               </p>
               
               <p className="text-[11px] text-slate-400 leading-relaxed font-medium">
-                By maintaining registration sequences, you certify authorization of NexaCart's <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Conditions of Sale</span> and structural processing clauses noted inside our <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Privacy Registry</span>.
+                By maintaining registration sequences, you certify authorization of NextCart's <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Conditions of Sale</span> and structural processing clauses noted inside our <span className="text-blue-600 hover:underline cursor-pointer font-semibold">Privacy Registry</span>.
               </p>
             </div>
 

@@ -4,6 +4,7 @@ import { GoogleLogin } from "@react-oauth/google";
 import { googleLoginApi } from "../features/auth/authAPI.js";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
+import logo from "../assets/NextCart_logo.png";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -47,9 +48,9 @@ const Login = () => {
 
           {/* Clean Brand Typography */}
           <div className="relative z-10">
-            <Link to="/" className="flex items-center gap-2 font-black text-2xl tracking-tight text-white group">
-              <span className="text-2xl transition-transform group-hover:scale-110 duration-300">🛒</span> 
-              <span>Nexa<span className="text-yellow-400">Cart</span></span>
+            <Link to="/" className="flex items-center gap-3 font-black text-2xl tracking-tight text-white group">
+              <img src={logo} alt="NextCart logo" className="h-10 w-auto object-contain" />
+              <span>Next<span className="text-yellow-400">Cart</span></span>
             </Link>
           </div>
 
@@ -97,8 +98,8 @@ const Login = () => {
           
           {/* Mobile Top Header - Only shows up on mobile screens */}
           <div className="flex md:hidden items-center justify-between pb-6 mb-2 border-b border-slate-100">
-            <div className="flex items-center gap-1.5 font-black text-xl tracking-tight text-blue-600">
-              <span>🛒</span> NexaCart
+            <div className="flex items-center gap-2 font-black text-xl tracking-tight text-blue-600">
+              <img src={logo} alt="NextCart logo" className="h-7 w-auto object-contain" /> NextCart
             </div>
             <Link to="/register" className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition-all">
               Sign Up
