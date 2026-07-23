@@ -1,18 +1,102 @@
-# React + Vite
+# 🛒 NextCart AI - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern AI-powered e-commerce frontend built with **React.js**, **Redux Toolkit**, **Vite**, and **Tailwind CSS**. The application provides a fast, responsive, and user-friendly shopping experience with AI-powered features and secure authentication.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+🌐 **Live Website:** https://ecommerce-frontend-eta-jet.vercel.app
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 📂 Backend Repository
+https://github.com/rahul123-bot/ecommerce-backend
+⚙️ 
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+- 🔐 JWT Authentication
+- 🔑 Google OAuth Login
+- 🤖 AI Shopping Assistant
+- 🔍 Smart Product Search
+- ❤️ Wishlist Management
+- 🛒 Shopping Cart
+- 💳 Razorpay Payment Integration
+- 👤 User Profile
+- 📦 Order History
+- 📱 Fully Responsive Design
+- 🌙 Modern UI with Tailwind CSS
+
+---
+
+## 🛠 Tech Stack
+
+- React.js
+- Redux Toolkit
+- Tailwind CSS
+- Vite
+- React Router
+- Axios
+
+---
+
+## 📁 Folder Structure
+
+
+src/
+├── components/
+├── pages/
+├── redux/
+├── hooks/
+├── services/
+├── utils/
+├── assets/
+└── App.jsx
+
+---
+
+## ⚙️ Installation
+
+bash
+git clone https://github.com/rahulchandasil/ecommerce-frontend
+
+cd your-frontend-repository
+
+npm install
+
+npm run dev
+
+
+---
+
+## 🔗 Backend API
+
+This frontend communicates with the **NextCart Backend API**.
+
+API URL:
+
+https://ecommerce-backend-2-dw69.onrender.com
+
+
+---
+
+## 📸 Screenshots
+
+> Add screenshots here.
+
+---
+
+## 👨‍💻 Author
+
+**Rahul Chanda Sil**
+
+GitHub: https://github.com/rahulchandasil
+
+LinkedIn: https://linkedin.com/in/rahul-sil-891070170
+
+---
+
+⭐ If you like this project, don't forget to star the repository!
